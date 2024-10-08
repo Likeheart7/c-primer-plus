@@ -10,6 +10,8 @@ void exer6(void);
 int cube(int number);
 void exer7(void);
 void exer8(void);
+void exer9(void);
+void Temperatures(double temperatrue);
 
 int main(void) {
     // exer1();
@@ -20,6 +22,7 @@ int main(void) {
     // exer6();
     // exer7();
     // exer8();
+    exer9();
 }
 
 void exer1(void) {
@@ -120,4 +123,22 @@ void exer8(void) {
         printf("%d %% %d is %d\n", first_operand, second_operand, first_operand % second_operand);
     }
     printf("\n");
+}
+
+void exer9(void) {
+    double temperature = 0;
+    while (1) {
+        printf("输入华氏温度：");
+        int input_count = scanf("%lf", &temperature);
+        // printf("读取数量%d\n", input_count);
+        if (input_count != 1) break;
+        Temperatures(temperature);
+    }
+}
+void Temperatures(double temperature) {
+    double stemper = 5.0 / 9.0 * (temperature - 32.0);
+    double ktemper = stemper + 273.16;
+    printf("摄氏温度为：%lf\n", stemper);
+    printf("开氏温度为：%lf\n", ktemper);
+
 }
