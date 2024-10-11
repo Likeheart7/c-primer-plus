@@ -6,6 +6,8 @@
         "math.h": "c",
         "string.h": "c",
         "algorithm": "c",
-        "cctype": "c"
+        "cctype": "c",
+        "*.tcc": "c",
+        "random": "c"
     }
 }
